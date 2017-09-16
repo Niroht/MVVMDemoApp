@@ -1,0 +1,25 @@
+﻿<Window x:Class="MVVMDemoApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MVVMDemoApp"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="700" Width="1050">
+  <Window.Resources>
+    <ResourceDictionary>
+      <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="View/FilmLookupView.xaml"/>
+      </ResourceDictionary.MergedDictionaries>
+    </ResourceDictionary>
+  </Window.Resources>
+
+  <Grid Margin="20">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto"/>
+      <RowDefinition/>
+    </Grid.RowDefinitions>
+    <TextBlock Text="Demo App" Style="{DynamicResource Header}"/>
+    <ContentPresenter Content="{Binding PrimaryViewModel}" Grid.Row="1"/>
+  </Grid>
+</Window>

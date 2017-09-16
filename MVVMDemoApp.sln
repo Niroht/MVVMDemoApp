@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.16
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVVMDemoApp", "MVVMDemoApp\MVVMDemoApp.csproj", "{96BBC750-A0E4-4D8E-9BDB-B4FFFC1940D4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVVMDemoApp.UnitTests", "MVVMDemoApp.UnitTests\MVVMDemoApp.UnitTests.csproj", "{00326BA0-444A-482F-B81A-AA27853FB902}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{96BBC750-A0E4-4D8E-9BDB-B4FFFC1940D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96BBC750-A0E4-4D8E-9BDB-B4FFFC1940D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96BBC750-A0E4-4D8E-9BDB-B4FFFC1940D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96BBC750-A0E4-4D8E-9BDB-B4FFFC1940D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00326BA0-444A-482F-B81A-AA27853FB902}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00326BA0-444A-482F-B81A-AA27853FB902}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00326BA0-444A-482F-B81A-AA27853FB902}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00326BA0-444A-482F-B81A-AA27853FB902}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

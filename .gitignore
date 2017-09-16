@@ -1,0 +1,5 @@
+packages/
+MVVMDemoApp/bin/
+MVVMDemoApp/obj/
+MVVMDemoApp.UnitTests/obj/
+MVVMDemoApp.UnitTests/bin/
