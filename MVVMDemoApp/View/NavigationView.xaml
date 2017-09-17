@@ -1,0 +1,16 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:viewModel="clr-namespace:MVVMDemoApp.ViewModel"
+                    xmlns:local="clr-namespace:MVVMDemoApp.View">
+  <DataTemplate DataType="{x:Type viewModel:NavigationViewModel}">
+    <Grid>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="2*"/>
+        <ColumnDefinition />
+      </Grid.ColumnDefinitions>
+      <Button Command="{Binding NavigateToFilmsView}" Content="Films" VerticalAlignment="Top" />
+
+      <Button Grid.Column="1" Command="{Binding NavigateToTelevisionSeriesView}" Content="Television Series" VerticalAlignment="Top"/>
+    </Grid>
+  </DataTemplate>
+</ResourceDictionary>

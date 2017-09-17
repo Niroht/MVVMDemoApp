@@ -16,6 +16,7 @@ namespace MVVMDemoApp.Model
         Fantasy,
         Comedy,
         Musical,
+        Mystery,
         Unspecified
     }
 }

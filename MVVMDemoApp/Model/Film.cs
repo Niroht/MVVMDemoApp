@@ -6,19 +6,13 @@ using System.Threading.Tasks;
 
 namespace MVVMDemoApp.Model
 {
-    public class Film
+    public class Film : Media
     {
-        public string Title { get; }
-
         public IEnumerable<string> Directors { get; }
 
-        public IEnumerable<Genre> Genres { get; }
-
-        public Film(string title, IEnumerable<string> directors, IEnumerable<Genre> genres)
+        public Film(string title, IEnumerable<string> directors, IEnumerable<Genre> genres) : base(title, genres)
         {
-            Title = title;
             Directors = directors;
-            Genres = genres;
         }
     }
 }

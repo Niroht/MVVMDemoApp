@@ -7,7 +7,8 @@ using System.Threading.Tasks;
 
 namespace MVVMDemoApp.Providers
 {
-    public interface IFilteredFilmProvider : IFilteredMediaProvider<Film, FilmFilterParameters>
+    public interface ITelevisionSeriesProvider
     {
+        IEnumerable<TelevisionSeries> GetTelevisionSeries();
     }
 }

@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace MVVMDemoApp.Model
 {
-    public class FilmFilterParameters : MediaFilterParameters
+    public class TelevisionSeriesFilterParameters : MediaFilterParameters
     {
-        public string Director { get; set; }
+        public string Creator { get; set; }
     }
 }

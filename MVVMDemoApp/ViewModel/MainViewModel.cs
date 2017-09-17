@@ -16,6 +16,19 @@ namespace MVVMDemoApp.ViewModel
     /// </summary>
     public class MainViewModel : ViewModelBase
     {
+        private NavigationViewModel _navigationViewModel;
+        public NavigationViewModel NavigationViewModel
+        {
+            get
+            {
+                return _navigationViewModel;
+            }
+            set
+            {
+                Set(nameof(NavigationViewModel), ref _navigationViewModel, value);
+            }
+        }
+
         private ViewModelBase _primaryViewModel;
         public ViewModelBase PrimaryViewModel
         {
@@ -29,25 +42,11 @@ namespace MVVMDemoApp.ViewModel
             }
         }
 
-        private string _test;
-        public string Test
-        {
-            get
-            {
-                return _test;
-            }
-            set
-            {
-                Set(nameof(Test), ref _test, value);
-            }
-        }
-
         /// <summary>
         /// Initializes a new instance of the MainViewModel class.
         /// </summary>
         public MainViewModel()
         {
-            Test = "test";
         }
     }
 }

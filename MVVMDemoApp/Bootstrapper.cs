@@ -1,5 +1,6 @@
 ﻿using Microsoft.Practices.Unity;
 using MVVMDemoApp.Providers;
+using MVVMDemoApp.Service;
 using MVVMDemoApp.ViewModel;
 using System;
 using System.Collections.Generic;
@@ -16,17 +17,18 @@ namespace MVVMDemoApp
             var container = new UnityContainer();
             RegisterInterfaces(container);
 
-            var filmLookupViewModel = container.Resolve<FilmLookupViewModel>();
-
+            var navigationViewModel = container.Resolve<NavigationViewModel>();
             var locator = container.Resolve<ViewModelLocator>();
-            locator.Main.PrimaryViewModel = filmLookupViewModel;
-            locator.Main.Test = "Loaded";
+            locator.Main.NavigationViewModel = navigationViewModel;
         }
 
         private static void RegisterInterfaces(UnityContainer container)
         {
-            container.RegisterType<IFilteredFilmProvider, FilteredFilmProvider>();
+            container.RegisterType<IFilteredFilmProvider, FilteredMediaProvider>();
+            container.RegisterType<IFilteredTelevisionSeriesProvider, FilteredMediaProvider>();
             container.RegisterType<IFilmProvider, FilmProvider>();
+            container.RegisterType<ITelevisionSeriesProvider, TelevisionSeriesProvider>();
+            container.RegisterType<IViewModelRenderer, ViewModelRenderer>();
         }
     }
 }

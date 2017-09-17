@@ -117,7 +117,13 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Load" xml:space="preserve">
+    <value>Load</value>
+  </data>
   <data name="LoadFilms" xml:space="preserve">
     <value>Load Films</value>
+  </data>
+  <data name="LoadTelevisionSeries" xml:space="preserve">
+    <value>Load Television Series</value>
   </data>
 </root>

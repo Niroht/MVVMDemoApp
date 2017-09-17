@@ -90,12 +90,25 @@
     <Compile Include="Model\Film.cs" />
     <Compile Include="Model\FilmFilterParameters.cs" />
     <Compile Include="Model\Genre.cs" />
+    <Compile Include="Model\Media.cs" />
+    <Compile Include="Model\MediaFilterParameters.cs" />
+    <Compile Include="Model\TelevisionSeries.cs" />
+    <Compile Include="Model\TelevisionSeriesFilterParameters.cs" />
     <Compile Include="Providers\FilmProvider.cs" />
-    <Compile Include="Providers\FilteredFilmProvider.cs" />
+    <Compile Include="Providers\FilteredMediaProvider.cs" />
     <Compile Include="Providers\IFilmProvider.cs" />
     <Compile Include="Providers\IFilteredFilmProvider.cs" />
+    <Compile Include="Providers\IFilteredMediaProvider.cs" />
+    <Compile Include="Providers\IFilteredTelevisionSeriesProvider.cs" />
+    <Compile Include="Providers\ITelevisionSeriesProvider.cs" />
+    <Compile Include="Providers\TelevisionSeriesProvider.cs" />
+    <Compile Include="Service\IViewModelRenderer.cs" />
+    <Compile Include="Service\ViewModelRenderer.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="ViewModel\FilmLookupViewModel.cs" />
+    <Compile Include="ViewModel\MediaLookupViewModel.cs" />
+    <Compile Include="ViewModel\NavigationViewModel.cs" />
+    <Compile Include="ViewModel\TelevisionSeriesLookupViewModel.cs" />
     <Compile Include="ViewModel\ViewModelLocator.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -106,6 +119,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\FilmLookupView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\NavigationView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\TelevisionSeriesLookupView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

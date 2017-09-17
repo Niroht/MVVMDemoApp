@@ -57,7 +57,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FilteredFilmProviderTests.cs" />
+    <Compile Include="FilteredMediaProviderTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

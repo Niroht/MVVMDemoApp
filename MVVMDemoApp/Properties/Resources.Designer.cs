@@ -61,11 +61,29 @@ namespace MVVMDemoApp.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Load.
+        /// </summary>
+        internal static string Load {
+            get {
+                return ResourceManager.GetString("Load", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Load Films.
         /// </summary>
         internal static string LoadFilms {
             get {
                 return ResourceManager.GetString("LoadFilms", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Load Television Series.
+        /// </summary>
+        internal static string LoadTelevisionSeries {
+            get {
+                return ResourceManager.GetString("LoadTelevisionSeries", resourceCulture);
             }
         }
     }

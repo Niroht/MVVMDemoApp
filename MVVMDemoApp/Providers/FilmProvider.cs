@@ -9,7 +9,7 @@ namespace MVVMDemoApp.Providers
 {
     public class FilmProvider : IFilmProvider
     {
-        private static readonly IEnumerable<Film> films = new[]
+        private static readonly IEnumerable<Film> _films = new[]
         {
             new Film("Beauty and the Beast", new[] { "Bill Condon" }, new[] { Genre.Romance, Genre.Musical, Genre.Fantasy}),
             new Film("The Fate of the Furious", new[] { "F. Gary Gray" }, new[] { Genre.Action }),
@@ -24,7 +24,7 @@ namespace MVVMDemoApp.Providers
 
         public IEnumerable<Film> GetFilms()
         {
-            return films;
+            return _films;
         }
     }
 }

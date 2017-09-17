@@ -10,6 +10,8 @@
     <ResourceDictionary>
       <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="View/FilmLookupView.xaml"/>
+        <ResourceDictionary Source="View/NavigationView.xaml"/>
+        <ResourceDictionary Source="View/TelevisionSeriesLookupView.xaml"/>
       </ResourceDictionary.MergedDictionaries>
     </ResourceDictionary>
   </Window.Resources>
@@ -19,7 +21,7 @@
       <RowDefinition Height="Auto"/>
       <RowDefinition/>
     </Grid.RowDefinitions>
-    <TextBlock Text="Demo App" Style="{DynamicResource Header}"/>
+    <ContentPresenter Content="{Binding NavigationViewModel}" />
     <ContentPresenter Content="{Binding PrimaryViewModel}" Grid.Row="1"/>
   </Grid>
 </Window>
