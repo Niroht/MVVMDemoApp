@@ -22,9 +22,9 @@ namespace MVVMDemoApp.Providers
             new Film("Transformers: The Last Knight", new[] {"Michael Bay"}, new[] { Genre.Action, Genre.ScienceFiction })
         };
 
-        public IEnumerable<Film> GetFilms()
+        public Task<IEnumerable<Film>> GetFilmsAsync()
         {
-            return _films;
+            return Task.FromResult(_films);
         }
     }
 }

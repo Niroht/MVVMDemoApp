@@ -15,7 +15,7 @@ namespace MVVMDemoApp.UnitTests
         {
             // arrange
             var tc = new TestContext();
-            tc.FilmProviderMock.Setup(x => x.GetFilms()).Returns<IEnumerable<Film>>(null);
+            tc.FilmProviderMock.Setup(x => x.GetFilmsAsync()).Returns<IEnumerable<Film>>(null);
 
             // act
             var result = tc.Sut.GetFilms(new FilmFilterParameters());
@@ -29,7 +29,7 @@ namespace MVVMDemoApp.UnitTests
         {
             // arrange
             var tc = new TestContext();
-            tc.FilmProviderMock.Setup(x => x.GetFilms()).Returns(Enumerable.Empty<Film>());
+            tc.FilmProviderMock.Setup(x => x.GetFilmsAsync()).Returns(Enumerable.Empty<Film>());
 
             // act
             var result = tc.Sut.GetFilms(new FilmFilterParameters());
@@ -51,7 +51,7 @@ namespace MVVMDemoApp.UnitTests
             };
 
             var tc = new TestContext();
-            tc.FilmProviderMock.Setup(x => x.GetFilms()).Returns(films);
+            tc.FilmProviderMock.Setup(x => x.GetFilmsAsync()).Returns(films);
 
             // act
             var result = tc.Sut.GetFilms(new FilmFilterParameters() { Title = filterTerm });
@@ -75,7 +75,7 @@ namespace MVVMDemoApp.UnitTests
             };
 
             var tc = new TestContext();
-            tc.FilmProviderMock.Setup(x => x.GetFilms()).Returns(films);
+            tc.FilmProviderMock.Setup(x => x.GetFilmsAsync()).Returns(films);
 
             // act
             var result = tc.Sut.GetFilms(new FilmFilterParameters() { Director = filterTerm });
@@ -96,7 +96,7 @@ namespace MVVMDemoApp.UnitTests
             };
 
             var tc = new TestContext();
-            tc.FilmProviderMock.Setup(x => x.GetFilms()).Returns(films);
+            tc.FilmProviderMock.Setup(x => x.GetFilmsAsync()).Returns(films);
 
             // act
             var result = tc.Sut.GetFilms(new FilmFilterParameters() { Genre = Genre.Action });
@@ -116,7 +116,7 @@ namespace MVVMDemoApp.UnitTests
             };
 
             var tc = new TestContext();
-            tc.FilmProviderMock.Setup(x => x.GetFilms()).Returns(films);
+            tc.FilmProviderMock.Setup(x => x.GetFilmsAsync()).Returns(films);
 
             tc.Sut.GetFilms(new FilmFilterParameters());
 
@@ -124,7 +124,7 @@ namespace MVVMDemoApp.UnitTests
             var result = tc.Sut.GetFilms(new FilmFilterParameters());
 
             // assert
-            tc.FilmProviderMock.Verify(x => x.GetFilms(), Times.Once);
+            tc.FilmProviderMock.Verify(x => x.GetFilmsAsync(), Times.Once);
         }
 
         [Test]
@@ -137,7 +137,7 @@ namespace MVVMDemoApp.UnitTests
             };
 
             var tc = new TestContext();
-            tc.FilmProviderMock.Setup(x => x.GetFilms()).Returns(films);
+            tc.FilmProviderMock.Setup(x => x.GetFilmsAsync()).Returns(films);
 
             tc.Sut.GetFilms(new FilmFilterParameters());
 
@@ -145,7 +145,7 @@ namespace MVVMDemoApp.UnitTests
             var result = tc.Sut.GetFilms(new FilmFilterParameters(), reload: true);
 
             // assert
-            tc.FilmProviderMock.Verify(x => x.GetFilms(), Times.Exactly(2));
+            tc.FilmProviderMock.Verify(x => x.GetFilmsAsync(), Times.Exactly(2));
         }
 
         [Test]
@@ -158,7 +158,7 @@ namespace MVVMDemoApp.UnitTests
             };
 
             var tc = new TestContext();
-            tc.FilmProviderMock.Setup(x => x.GetFilms()).Returns(films);
+            tc.FilmProviderMock.Setup(x => x.GetFilmsAsync()).Returns(films);
 
             tc.Sut.GetFilms(new FilmFilterParameters() { Title = "AAA" });
 

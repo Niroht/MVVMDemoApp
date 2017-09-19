@@ -28,7 +28,7 @@ namespace MVVMDemoApp.ViewModel
                 {
                     FilterParameters.Director = value;
                     RaisePropertyChanged(nameof(Director));
-                    FiltersChanged();
+                    FiltersChangedAsync();
                 }
             }
         }

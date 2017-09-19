@@ -70,7 +70,7 @@ namespace MVVMDemoApp.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Load Films.
+        ///   Looks up a localized string similar to Reload Films.
         /// </summary>
         internal static string LoadFilms {
             get {
@@ -79,7 +79,7 @@ namespace MVVMDemoApp.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Load Television Series.
+        ///   Looks up a localized string similar to Reload Television Series.
         /// </summary>
         internal static string LoadTelevisionSeries {
             get {

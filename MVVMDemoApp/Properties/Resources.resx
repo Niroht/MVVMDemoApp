@@ -121,9 +121,9 @@
     <value>Load</value>
   </data>
   <data name="LoadFilms" xml:space="preserve">
-    <value>Load Films</value>
+    <value>Reload Films</value>
   </data>
   <data name="LoadTelevisionSeries" xml:space="preserve">
-    <value>Load Television Series</value>
+    <value>Reload Television Series</value>
   </data>
 </root>

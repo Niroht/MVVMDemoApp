@@ -21,11 +21,11 @@ namespace MVVMDemoApp.Providers
             _televisionSeriesProvider = televisionSeriesProvider;
         }
 
-        public IEnumerable<TelevisionSeries> GetMedia(TelevisionSeriesFilterParameters filterParameters, bool reload = false)
+        public async Task<IEnumerable<TelevisionSeries>> GetMediaAsync(TelevisionSeriesFilterParameters filterParameters, bool reload = false)
         {
             if (reload || _televisionSeriesCache == null)
             {
-                _televisionSeriesCache = _televisionSeriesProvider.GetTelevisionSeries()?.ToList();
+                _televisionSeriesCache = (await _televisionSeriesProvider.GetTelevisionSeriesAsync())?.ToList();
             }
 
             if (_televisionSeriesCache == null || !_televisionSeriesCache.Any())
@@ -45,11 +45,11 @@ namespace MVVMDemoApp.Providers
             return results;
         }
 
-        public IEnumerable<Film> GetMedia(FilmFilterParameters filterParameters, bool reload = false)
+        public async Task<IEnumerable<Film>> GetMediaAsync(FilmFilterParameters filterParameters, bool reload = false)
         {
             if (reload || _filmsCache == null)
             {
-                _filmsCache = _filmProvider.GetFilms()?.ToList();
+                _filmsCache = (await _filmProvider.GetFilmsAsync())?.ToList();
             }
 
             if (_filmsCache == null || !_filmsCache.Any())

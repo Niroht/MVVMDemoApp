@@ -9,6 +9,6 @@ namespace MVVMDemoApp.Providers
 {
     public interface IFilmProvider
     {
-        IEnumerable<Film> GetFilms();
+        Task<IEnumerable<Film>> GetFilmsAsync();
     }
 }

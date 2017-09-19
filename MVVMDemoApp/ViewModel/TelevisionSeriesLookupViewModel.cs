@@ -22,7 +22,7 @@ namespace MVVMDemoApp.ViewModel
                 {
                     FilterParameters.Creator = value;
                     RaisePropertyChanged(nameof(Creator));
-                    FiltersChanged();
+                    FiltersChangedAsync();
                 }
             }
         }

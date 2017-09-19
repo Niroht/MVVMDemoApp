@@ -19,9 +19,9 @@ namespace MVVMDemoApp.Providers
             new TelevisionSeries("The Handmaid's Tale", new[] { "Bruce Miller" }, new[] { Genre.Drama })
         };
 
-        public IEnumerable<TelevisionSeries> GetTelevisionSeries()
+        public Task<IEnumerable<TelevisionSeries>> GetTelevisionSeriesAsync()
         {
-            return _televisionSeries;
+            return Task.FromResult(_televisionSeries);
         }
     }
 }

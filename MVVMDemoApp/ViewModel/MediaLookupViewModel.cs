@@ -5,6 +5,7 @@ using MVVMDemoApp.Providers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Windows.Input;
 
 namespace MVVMDemoApp.ViewModel
@@ -40,7 +41,7 @@ namespace MVVMDemoApp.ViewModel
                 {
                     FilterParameters.Genre = value;
                     RaisePropertyChanged(nameof(Genre));
-                    FiltersChanged();
+                    FiltersChangedAsync();
                 }
             }
         }
@@ -57,14 +58,14 @@ namespace MVVMDemoApp.ViewModel
                 {
                     FilterParameters.Title = value;
                     RaisePropertyChanged(nameof(Title));
-                    FiltersChanged();
+                    FiltersChangedAsync();
                 }
             }
         }
 
         public IEnumerable<Genre> AvailableGenres => Enum.GetValues(typeof(Genre)).Cast<Genre>();
 
-        public ICommand LoadMediaCommand => new RelayCommand(LoadMedia);
+        public ICommand LoadMediaCommand => new RelayCommand(() => LoadMediaAsync());
 
         public virtual string LoadCopy => Properties.Resources.Load;
 
@@ -73,17 +74,17 @@ namespace MVVMDemoApp.ViewModel
             _filteredMediaProvider = filteredMediaProvider;
 
             Genre = Genre.Unspecified;
-            LoadMedia();
+            LoadMediaAsync();
         }
 
-        protected void LoadMedia()
+        protected async Task LoadMediaAsync()
         {
-            FilteredMedia = _filteredMediaProvider?.GetMedia(FilterParameters, true);
+            FilteredMedia = await _filteredMediaProvider?.GetMediaAsync(FilterParameters, true);
         }
 
-        protected void FiltersChanged()
+        protected async Task FiltersChangedAsync()
         {
-            FilteredMedia = _filteredMediaProvider?.GetMedia(FilterParameters);
+            FilteredMedia = await _filteredMediaProvider?.GetMediaAsync(FilterParameters);
         }
     }
 }

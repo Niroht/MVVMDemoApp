@@ -10,9 +10,6 @@ namespace MVVMDemoApp
     {
         public MainWindow()
         {
-            var locator = new ViewModelLocator();
-            DataContext = locator.Main;
-
             InitializeComponent();
 
             Bootstrapper.RunApplication();

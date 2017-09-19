@@ -9,6 +9,6 @@ namespace MVVMDemoApp.Providers
 {
     public interface ITelevisionSeriesProvider
     {
-        IEnumerable<TelevisionSeries> GetTelevisionSeries();
+        Task<IEnumerable<TelevisionSeries>> GetTelevisionSeriesAsync();
     }
 }
